@@ -1,0 +1,16 @@
+{
+  "name": "archimedes-service-broker",
+  "version": "1.0.0",
+  "description": "To act as an API for FXCM Rest",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}
