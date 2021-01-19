@@ -11,7 +11,7 @@ const Health = require('../models/health')
 router.get('/', (req, res)=>{
 
         const health = {
-            appName:'archimedes-service-broker',
+            appName:'archimedes-service-broker-ye',
             status:'live',
             statusMessage: 'ok',
             lastUpdated: Date.now()};
