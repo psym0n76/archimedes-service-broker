@@ -64,12 +64,15 @@ var rabbit_callback = (statusCode, params, data) => {
 
 		var candleMessage = {
             'marketId': params.MarketId,
+            'externalMarketId' : params.ExternalMarketId,
             'startDate': params.StartDate,
             'endDate' : params.EndDate,
 			'market' : params.Market,
             'timeFrame' : params.TimeFrame,
             'interval' : params.Interval,
-			'candles' : candles
+            'candles' : candles,
+            'timeFrameBroker' : params.TimeFrameBroker,
+            'maxIntervals': params.MaxIntervals
         }
         
 		var rabbitParams = {
