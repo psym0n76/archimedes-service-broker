@@ -67,8 +67,7 @@ var rabbit_callback = (statusCode, params, data) => {
             'startDate': params.StartDate,
             'endDate' : params.EndDate,
 			'market' : params.Market,
-            'granularity':  params.Interval + params.TimeFrame,
-            'timeFrame' : params.TimeFrame,
+            'timeFrame' : params.Interval + params.TimeFrame,
             'interval' : params.Interval,
 			'candles' : candles
         }
