@@ -7,16 +7,18 @@ const router = express.Router();
 //    console.log('this is middleware running - like functions')
 //});
 
+
 //routes
-router.get('/', (req, res)=>{
+//example route http://localhost:3000/api/broker-subscriber/price/market/GBP%2FUSD/
+router.get('/price/market/:marketName', (req, res)=>{
 
 //read response
-// tranlate into rrequest
+res.send(req.params)
 
 var params = {
     'resource': '/subscribe',
     'method': 'POST',
-    'params': { 'pairs':'GBP/USD' }
+    'params': { 'pairs':req.params.marketName }
 };
 
 var querystring = require('querystring');
@@ -26,7 +28,6 @@ var request = require('../Broker/request-live-price');
 
 //add custom callback to post update to queue
 request.subscriber(params);
-
     res.send("Live Price Request");
 }) ;
 
